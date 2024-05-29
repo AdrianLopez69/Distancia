@@ -18,13 +18,16 @@ Siempre cada programa debe de tener esto --%>
 <body>
 <h1>Saludando JSP</h1>
 <form action="Resultado.jsp" method="post">
-    <label for="num1">Ingrese el primer numero</label>
-    <input type="text" id="num1" name="num1" >
+    <label for="velini">Ingrese la velocidad inicial(m/s)</label>
+    <input type="text" id="velini" name="velini" >
 
-    <label for="num2">Ingrese el segundo numero</label>
-    <input type="text" id="num2" name="num2" >
+    <label for="velfin">Ingrese la velocidad final(m/s)</label>
+    <input type="text" id="velfin" name="velfin" >
 
-    <input type="submit" value="Comparar">
+    <label for="tiempo">Ingrese el tiempo(s)</label>
+    <input type="text" id="tiempo" name="tiempo" >
+
+    <input type="submit" value="Calcular">
 
 </form>
 </body>

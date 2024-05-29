@@ -13,19 +13,21 @@
 <body>
 <h1>Resultados</h1>
 <%
-    String num1Str =request.getParameter("num1");
-    String num2Str =request.getParameter("num2");
+    String veliniStr =request.getParameter("velini");
+    String velfinStr =request.getParameter("velfin");
+    String tiempoStr =request.getParameter("tiempo");
     //Hacerle parse Int
-    int num1 = Integer.parseInt(num1Str);
-    int num2 = Integer.parseInt(num2Str);
-    if (num1>num2){
-     out.print("El numero "+num1+" es mayor que "+num2+"\n");
-    }else if (num2>num1){
-        out.print("El numero "+num2+ " es mayor que "+num1+"\n");
-}else{
-        out.print("Ambos numeros son iguales");
+    double velini=Double.parseDouble(veliniStr);
+    double velfin=Double.parseDouble(velfinStr);
+    double tiempo=Double.parseDouble(tiempoStr);
+    double distancia=((velini+velfin)/2)*tiempo;
+    out.print(" La distancia recorrida es: "+distancia+" metros ");
+double kilometros= distancia/1000;
+%>
+<br>
+<%
 
-}
+    out.print(" La distancia recorrida es: "+kilometros+" kilometros");
 %>
 <br>
 <a href="index.jsp">Volver</a>
